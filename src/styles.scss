@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@use "styles/material/theme";
+@use "styles/material/components/datepicker";
+
+:root {
+  --hue: 294;
+  --saturation: 42%;
+  --lightness: 51%;
+  --color-primary: var(--hue), var(--saturation), var(--lightness);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px 20px;
+  box-shadow: -1px 0px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+.theme-two {
+  --hue: 220;
+  --saturation: 42%;
+  --lightness: 51%;
+  --color-primary: var(--hue), var(--saturation), var(--lightness);
+}

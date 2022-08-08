@@ -1,0 +1,20 @@
+@use "palette";
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$angularTheme-primary: mat.define-palette(palette.$my-palette);
+$angularTheme-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$angularTheme-warn: mat.define-palette(mat.$red-palette);
+
+$angularTheme-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angularTheme-primary,
+      accent: $angularTheme-accent,
+      warn: $angularTheme-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($angularTheme-theme);
